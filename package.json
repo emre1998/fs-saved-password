@@ -1,0 +1,15 @@
+{
+  "name": "full-stack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:front-end": "cd front-end && npm start",
+    "start:saved-password": "cd back-end && node saved-password",
+    "start": "concurrently \"npm run start:front-end\" \"npm run start:saved-password\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
