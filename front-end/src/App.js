@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styles from './App.css'; 
 
 function App() {
@@ -11,13 +11,13 @@ function App() {
       .catch(error => console.error('Hata:', error));
   };
 
-  useEffect(() => {
+  const handleButtonClick = () => {
     fetchData();
-  }, []);
+  };
 
   return (
     <div className="button">
-      <button className={styles.button} onClick={fetchData}>Veriyi Getir</button>
+      <button className={styles.button} onClick={handleButtonClick}>Veriyi Getir</button>
       <ul>
         {wifiData.map((wifi, index) => (
           <li key={index}>
